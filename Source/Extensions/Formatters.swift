@@ -23,25 +23,25 @@
 //
 
 extension Formatters {
-    public static let Default = Formatter("[%@] %@ %@: %@", [
-        .Date("yyyy-MM-dd HH:mm:ss.SSS"),
-        .Location,
-        .Level,
-        .Message
+    public static let `default` = Formatter("[%@] %@ %@: %@", [
+        .date("yyyy-MM-dd HH:mm:ss.SSS"),
+        .location,
+        .level,
+        .message
     ])
     
-    public static let Minimal = Formatter("%@ %@: %@", [
-        .Location,
-        .Level,
-        .Message
+    public static let minimal = Formatter("%@ %@: %@", [
+        .location,
+        .level,
+        .message
     ])
     
-    public static let Detailed = Formatter("[%@] %@.%@:%@ %@: %@", [
-        .Date("yyyy-MM-dd HH:mm:ss.SSS"),
-        .File(fullPath: false, fileExtension: false),
-        .Function,
-        .Line,
-        .Level,
-        .Message
+    public static let detailed = Formatter("[%@] %@.%@:%@ %@: %@", [
+        .date("yyyy-MM-dd HH:mm:ss.SSS"),
+        .file(fullPath: false, fileExtension: false),
+        .function,
+        .line,
+        .level,
+        .message
     ])
 }
